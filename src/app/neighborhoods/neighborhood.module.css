@@ -166,3 +166,16 @@ details[open] .faqQ::after { transform: rotate(180deg); }
 }
 
 .btnCallDark:hover { background: var(--red-dark); }
+
+@media (min-width: 768px) {
+  .heroInner h1 { font-size: 28px; }
+  .heroInner p { font-size: 15px; }
+  .areaInner h2 { font-size: 20px; }
+  .areaInner p { font-size: 14px; }
+}
+
+@media (min-width: 1024px) {
+  .heroInner h1 { font-size: 34px; }
+  .hero { padding: 2.5rem 1.25rem 2rem; }
+  .ctaInner h2 { font-size: 26px; }
+}
