@@ -46,3 +46,13 @@
   line-height: 1.65;
   margin-bottom: .375rem;
 }
+
+@media (min-width: 768px) {
+  .inner h1 { font-size: 28px; }
+  .inner h2 { font-size: 18px; }
+  .inner p { font-size: 15px; }
+}
+@media (min-width: 1024px) {
+  .page { padding: 3rem 1.25rem 4rem; }
+  .inner h1 { font-size: 32px; }
+}

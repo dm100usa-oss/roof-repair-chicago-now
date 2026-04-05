@@ -87,7 +87,7 @@ export default function HomePage() {
           <a href={`tel:${MAIN_PHONE}`} className={styles.btnCall}>
             CALL NOW — {MAIN_PHONE_DISPLAY}
           </a>
-          <div className={styles.btnCallNote}>Free · No obligation · Available 24/7</div>
+          <div className={styles.btnCallNote}>No upfront payment · We come to you · No hidden fees</div>
         </div>
       </section>
 
@@ -103,12 +103,12 @@ export default function HomePage() {
             <div className={styles.trustLabel}>Emergency service</div>
           </div>
           <div className={styles.trustItem}>
-            <div className={styles.trustNum}>Same day</div>
-            <div className={styles.trustLabel}>Response</div>
+            <div className={styles.trustNum}>Quality</div>
+            <div className={styles.trustLabel}>Verified work</div>
           </div>
           <div className={styles.trustItem}>
-            <div className={styles.trustNum}>Free</div>
-            <div className={styles.trustLabel}>Inspection</div>
+            <div className={styles.trustNum}>Affordable</div>
+            <div className={styles.trustLabel}>Prices from $200</div>
           </div>
         </div>
       </div>
