@@ -2,7 +2,10 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { locales, dict, type Locale } from '@/lib/i18n'
 import { companies, MAIN_PHONE, MAIN_PHONE_DISPLAY } from '@/lib/companies'
+import { neighborhoods } from '@/lib/neighborhoods'
+import { services } from '@/lib/services'
 import CompanyCard from '@/components/CompanyCard'
+import InternalLinks from '@/components/InternalLinks'
 import styles from './page.module.css'
 
 type Props = { params: { lang: string } }
@@ -36,6 +39,7 @@ export default function LangHomePage({ params }: Props) {
   const lang = params.lang as Locale
   if (!locales.includes(lang)) notFound()
   const t = dict[lang]
+  const isEs = lang === 'es'
 
   const faqItems = [
     { q: t.faq1q, a: t.faq1a },
@@ -60,7 +64,7 @@ export default function LangHomePage({ params }: Props) {
             {t.callNow} — {MAIN_PHONE_DISPLAY}
           </a>
           <div className={styles.btnCallNote}>
-            {lang === 'es' ? 'Sin pago anticipado · Vamos a usted · Sin cargos ocultos' : 'No upfront payment · We come to you · No hidden fees'}
+            {isEs ? 'Sin pago anticipado · Vamos a usted · Sin cargos ocultos' : 'No upfront payment · We come to you · No hidden fees'}
           </div>
         </div>
       </section>
@@ -76,12 +80,12 @@ export default function LangHomePage({ params }: Props) {
             <div className={styles.trustLabel}>{t.emergencyService}</div>
           </div>
           <div className={styles.trustItem}>
-            <div className={styles.trustNum}>{lang === 'es' ? 'Calidad' : 'Quality'}</div>
-            <div className={styles.trustLabel}>{lang === 'es' ? 'Trabajo verificado' : 'Verified work'}</div>
+            <div className={styles.trustNum}>{isEs ? 'Calidad' : 'Quality'}</div>
+            <div className={styles.trustLabel}>{isEs ? 'Trabajo verificado' : 'Verified work'}</div>
           </div>
           <div className={styles.trustItem}>
-            <div className={styles.trustNum}>{lang === 'es' ? 'Accesible' : 'Affordable'}</div>
-            <div className={styles.trustLabel}>{lang === 'es' ? 'Precios desde $200' : 'Prices from $200'}</div>
+            <div className={styles.trustNum}>{isEs ? 'Accesible' : 'Affordable'}</div>
+            <div className={styles.trustLabel}>{isEs ? 'Precios desde $200' : 'Prices from $200'}</div>
           </div>
         </div>
       </div>
@@ -136,6 +140,9 @@ export default function LangHomePage({ params }: Props) {
           ))}
         </div>
       </section>
+
+      {/* INTERNAL LINKS */}
+      <InternalLinks type="home" lang={lang} />
 
       <section className={styles.reviews}>
         <div className={styles.reviewsInner}>
