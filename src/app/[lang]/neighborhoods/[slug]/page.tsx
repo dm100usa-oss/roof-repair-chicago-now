@@ -1,25 +1,32 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
+import { locales, type Locale } from '@/lib/i18n'
 import { neighborhoods } from '@/lib/neighborhoods'
 import { companies, MAIN_PHONE, MAIN_PHONE_DISPLAY } from '@/lib/companies'
 import CompanyCard from '@/components/CompanyCard'
 import InternalLinks from '@/components/InternalLinks'
 import styles from '../neighborhood.module.css'
 
-type Props = { params: { slug: string } }
+type Props = { params: { lang: string; slug: string } }
 
 export function generateStaticParams() {
-  return neighborhoods.map(n => ({ slug: n.slug }))
+  return locales.flatMap(lang =>
+    neighborhoods.map(n => ({ lang, slug: n.slug }))
+  )
 }
 
 export function generateMetadata({ params }: Props): Metadata {
   const n = neighborhoods.find(n => n.slug === params.slug)
   if (!n) return {}
+  const isEs = params.lang === 'es'
+  const titleEs = `${n.name} — Reparación de Techos Chicago NOW`
   return {
-    title: `${n.title} — Roof Repair Chicago NOW`,
+    title: isEs ? titleEs : `${n.title} — Roof Repair Chicago NOW`,
     description: n.metaDescription,
     alternates: {
-      canonical: `https://roofrepairchicagonow.com/neighborhoods/${n.slug}`,
+      canonical: isEs
+        ? `https://roofrepairchicagonow.com/es/neighborhoods/${n.slug}`
+        : `https://roofrepairchicagonow.com/neighborhoods/${n.slug}`,
       languages: {
         'en': `https://roofrepairchicagonow.com/neighborhoods/${n.slug}`,
         'es': `https://roofrepairchicagonow.com/es/neighborhoods/${n.slug}`,
@@ -28,9 +35,15 @@ export function generateMetadata({ params }: Props): Metadata {
   }
 }
 
-export default function NeighborhoodPage({ params }: Props) {
+export default function LangNeighborhoodPage({ params }: Props) {
+  const lang = params.lang as Locale
+  if (!locales.includes(lang)) notFound()
+
   const n = neighborhoods.find(n => n.slug === params.slug)
   if (!n) notFound()
+
+  const isEs = lang === 'es'
+  const prefix = isEs ? '/es' : ''
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -38,14 +51,14 @@ export default function NeighborhoodPage({ params }: Props) {
       {
         '@type': 'WebPage',
         name: n.title,
-        url: `https://roofrepairchicagonow.com/neighborhoods/${n.slug}`,
+        url: `https://roofrepairchicagonow.com${prefix}/neighborhoods/${n.slug}`,
         description: n.metaDescription,
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://roofrepairchicagonow.com' },
-          { '@type': 'ListItem', position: 2, name: n.name, item: `https://roofrepairchicagonow.com/neighborhoods/${n.slug}` },
+          { '@type': 'ListItem', position: 1, name: isEs ? 'Inicio' : 'Home', item: `https://roofrepairchicagonow.com${prefix}` },
+          { '@type': 'ListItem', position: 2, name: n.name, item: `https://roofrepairchicagonow.com${prefix}/neighborhoods/${n.slug}` },
         ],
       },
       {
@@ -66,35 +79,41 @@ export default function NeighborhoodPage({ params }: Props) {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <div className={styles.breadcrumb}>
-            <a href="/">Home</a> › <a href="/neighborhoods">Neighborhoods</a> › {n.name}
+            <a href={`${prefix}/`}>{isEs ? 'Inicio' : 'Home'}</a> ›{' '}
+            <a href={`${prefix}/neighborhoods`}>{isEs ? 'Barrios' : 'Neighborhoods'}</a> ›{' '}
+            {n.name}
           </div>
-          <h1>{n.title}</h1>
+          <h1>{isEs ? `Reparación de Techos en ${n.name} Chicago` : n.title}</h1>
           <p>{n.intro}</p>
           <a href={`tel:${MAIN_PHONE}`} className={styles.btnCall}>
-            CALL NOW — {MAIN_PHONE_DISPLAY}
+            {isEs ? 'LLAMAR AHORA' : 'CALL NOW'} — {MAIN_PHONE_DISPLAY}
           </a>
         </div>
       </section>
 
       <section className={styles.companies}>
         <div className={styles.companiesInner}>
-          <div className={styles.sectionLabel}>10 companies ranked</div>
+          <div className={styles.sectionLabel}>
+            {isEs ? '10 empresas clasificadas' : '10 companies ranked'}
+          </div>
           {companies.map((company, i) => (
-            <CompanyCard key={company.id} company={company} isFirst={i === 0} />
+            <CompanyCard key={company.id} company={company} isFirst={i === 0} lang={lang} />
           ))}
         </div>
       </section>
 
       <section className={styles.areaInfo}>
         <div className={styles.areaInner}>
-          <h2>About roofing in {n.name}</h2>
+          <h2>{isEs ? `Techado en ${n.name}` : `About roofing in ${n.name}`}</h2>
           <p>{n.areaText}</p>
         </div>
       </section>
 
       <section className={styles.faq}>
         <div className={styles.faqInner}>
-          <div className={styles.faqTitle}>Questions about roof repair in {n.name}</div>
+          <div className={styles.faqTitle}>
+            {isEs ? `Preguntas sobre reparación de techos en ${n.name}` : `Questions about roof repair in ${n.name}`}
+          </div>
           {n.faq.map(item => (
             <details key={item.q} className={styles.faqItem}>
               <summary className={styles.faqQ}>{item.q}</summary>
@@ -104,14 +123,20 @@ export default function NeighborhoodPage({ params }: Props) {
         </div>
       </section>
 
-      <InternalLinks type="neighborhood" currentSlug={n.slug} />
+      <InternalLinks type="neighborhood" currentSlug={n.slug} lang={lang} />
 
       <section className={styles.ctaBottom}>
         <div className={styles.ctaInner}>
-          <h2>Need a roofer in {n.name} today?</h2>
-          <p>Call our dispatch center — we'll connect you with an available roofer fast. Free, no obligation.</p>
+          <h2>
+            {isEs ? `¿Necesita un techero en ${n.name} hoy?` : `Need a roofer in ${n.name} today?`}
+          </h2>
+          <p>
+            {isEs
+              ? 'Llame a nuestro centro de despacho — lo conectaremos con un techero disponible rápidamente. Gratis, sin compromiso.'
+              : "Call our dispatch center — we'll connect you with an available roofer fast. Free, no obligation."}
+          </p>
           <a href={`tel:${MAIN_PHONE}`} className={styles.btnCallDark}>
-            CALL NOW — {MAIN_PHONE_DISPLAY}
+            {isEs ? 'LLAMAR AHORA' : 'CALL NOW'} — {MAIN_PHONE_DISPLAY}
           </a>
         </div>
       </section>
