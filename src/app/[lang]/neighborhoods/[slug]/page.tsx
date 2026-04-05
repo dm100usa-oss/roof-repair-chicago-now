@@ -84,7 +84,7 @@ export default function LangNeighborhoodPage({ params }: Props) {
             {n.name}
           </div>
           <h1>{isEs ? `Reparación de Techos en ${n.name} Chicago` : n.title}</h1>
-          <p>{n.intro}</p>
+          <p>{isEs ? n.introEs : n.intro}</p>
           <a href={`tel:${MAIN_PHONE}`} className={styles.btnCall}>
             {isEs ? 'LLAMAR AHORA' : 'CALL NOW'} — {MAIN_PHONE_DISPLAY}
           </a>
@@ -105,7 +105,7 @@ export default function LangNeighborhoodPage({ params }: Props) {
       <section className={styles.areaInfo}>
         <div className={styles.areaInner}>
           <h2>{isEs ? `Techado en ${n.name}` : `About roofing in ${n.name}`}</h2>
-          <p>{n.areaText}</p>
+          <p>{isEs ? n.areaTextEs : n.areaText}</p>
         </div>
       </section>
 
@@ -114,7 +114,7 @@ export default function LangNeighborhoodPage({ params }: Props) {
           <div className={styles.faqTitle}>
             {isEs ? `Preguntas sobre reparación de techos en ${n.name}` : `Questions about roof repair in ${n.name}`}
           </div>
-          {n.faq.map(item => (
+          {(isEs ? n.faqEs : n.faq).map(item => (
             <details key={item.q} className={styles.faqItem}>
               <summary className={styles.faqQ}>{item.q}</summary>
               <div className={styles.faqA}>{item.a}</div>
