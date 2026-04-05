@@ -146,3 +146,16 @@
   text-align: center;
   font-weight: 500;
 }
+
+@media (min-width: 768px) {
+  .card { padding: 1.5rem; }
+  .name { font-size: 17px; }
+  .desc { font-size: 14px; }
+  .btnCall, .btnQuote { font-size: 15px; padding: 14px; }
+}
+
+@media (min-width: 1024px) {
+  .card { padding: 1.75rem; }
+  .num { width: 52px; height: 52px; font-size: 17px; }
+  .body { padding-left: 68px; }
+}

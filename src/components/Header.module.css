@@ -8,14 +8,7 @@
   letter-spacing: .03em;
   border-bottom: 1px solid var(--border);
 }
-
-.langBar a {
-  color: #444;
-  text-decoration: underline;
-  margin-left: 8px;
-  cursor: pointer;
-}
-
+.langBar a { color: #444; text-decoration: underline; margin-left: 8px; cursor: pointer; }
 .langBar a:hover { color: var(--text); }
 
 .header {
@@ -28,10 +21,13 @@
 }
 
 .inner {
-  max-width: 560px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: .875rem 1.25rem;
-  padding-top: calc(.875rem + 8px);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .logo {
@@ -40,6 +36,79 @@
   color: var(--text);
   letter-spacing: .01em;
   text-decoration: none;
+  flex-shrink: 0;
+}
+.logo span { color: var(--red); }
+
+/* Desktop nav - hidden on mobile */
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-.logo span { color: var(--red); }
+.navLink {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color .15s;
+}
+.navLink:hover { color: var(--text); }
+
+/* Hamburger - visible on mobile */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform .2s, opacity .2s;
+}
+
+.barOpen1 { transform: translateY(7px) rotate(45deg); }
+.barOpen2 { opacity: 0; }
+.barOpen3 { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile menu */
+.mobileMenu {
+  border-top: 1px solid var(--border);
+  background: var(--white);
+  padding: .5rem 0;
+}
+
+.mobileNavLink {
+  display: block;
+  padding: .75rem 1.25rem;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+}
+.mobileNavLink:last-child { border-bottom: none; }
+.mobileNavLink:hover { background: var(--bg); }
+
+/* Desktop breakpoint */
+@media (min-width: 768px) {
+  .desktopNav { display: flex; }
+  .hamburger { display: none; }
+  .mobileMenu { display: none; }
+
+  .inner { justify-content: space-between; }
+}
+
+@media (min-width: 1024px) {
+  .logo { font-size: 24px; }
+  .navLink { font-size: 14px; }
+}
