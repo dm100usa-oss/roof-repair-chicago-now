@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { neighborhoods } from '@/lib/neighborhoods'
 import { companies, MAIN_PHONE, MAIN_PHONE_DISPLAY } from '@/lib/companies'
 import CompanyCard from '@/components/CompanyCard'
+import InternalLinks from '@/components/InternalLinks'
 import styles from '../neighborhood.module.css'
 
 type Props = { params: { slug: string } }
@@ -17,7 +18,13 @@ export function generateMetadata({ params }: Props): Metadata {
   return {
     title: `${n.title} — Roof Repair Chicago NOW`,
     description: n.metaDescription,
-    alternates: { canonical: `https://roofrepairchicagonow.com/neighborhoods/${n.slug}` },
+    alternates: {
+      canonical: `https://roofrepairchicagonow.com/neighborhoods/${n.slug}`,
+      languages: {
+        'en': `https://roofrepairchicagonow.com/neighborhoods/${n.slug}`,
+        'es': `https://roofrepairchicagonow.com/es/neighborhoods/${n.slug}`,
+      },
+    },
   }
 }
 
@@ -96,6 +103,8 @@ export default function NeighborhoodPage({ params }: Props) {
           ))}
         </div>
       </section>
+
+      <InternalLinks type="neighborhood" currentSlug={n.slug} />
 
       <section className={styles.ctaBottom}>
         <div className={styles.ctaInner}>
