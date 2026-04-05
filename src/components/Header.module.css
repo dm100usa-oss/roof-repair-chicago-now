@@ -1,0 +1,45 @@
+.langBar {
+  background: #F1F5F9;
+  color: #666;
+  text-align: center;
+  padding: 6px 1rem;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .03em;
+  border-bottom: 1px solid var(--border);
+}
+
+.langBar a {
+  color: #444;
+  text-decoration: underline;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.langBar a:hover { color: var(--text); }
+
+.header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+
+.inner {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: .875rem 1.25rem;
+  padding-top: calc(.875rem + 8px);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: .01em;
+  text-decoration: none;
+}
+
+.logo span { color: var(--red); }
