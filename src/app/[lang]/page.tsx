@@ -59,7 +59,9 @@ export default function LangHomePage({ params }: Props) {
           <a href={`tel:${MAIN_PHONE}`} className={styles.btnCall}>
             {t.callNow} — {MAIN_PHONE_DISPLAY}
           </a>
-          <div className={styles.btnCallNote}>{t.callNote}</div>
+          <div className={styles.btnCallNote}>
+            {lang === 'es' ? 'Sin pago anticipado · Vamos a usted · Sin cargos ocultos' : 'No upfront payment · We come to you · No hidden fees'}
+          </div>
         </div>
       </section>
 
@@ -74,12 +76,12 @@ export default function LangHomePage({ params }: Props) {
             <div className={styles.trustLabel}>{t.emergencyService}</div>
           </div>
           <div className={styles.trustItem}>
-            <div className={styles.trustNum}>{t.sameDay}</div>
-            <div className={styles.trustLabel}>{t.response}</div>
+            <div className={styles.trustNum}>{lang === 'es' ? 'Calidad' : 'Quality'}</div>
+            <div className={styles.trustLabel}>{lang === 'es' ? 'Trabajo verificado' : 'Verified work'}</div>
           </div>
           <div className={styles.trustItem}>
-            <div className={styles.trustNum}>{t.free}</div>
-            <div className={styles.trustLabel}>{t.inspection}</div>
+            <div className={styles.trustNum}>{lang === 'es' ? 'Accesible' : 'Affordable'}</div>
+            <div className={styles.trustLabel}>{lang === 'es' ? 'Precios desde $200' : 'Prices from $200'}</div>
           </div>
         </div>
       </div>
