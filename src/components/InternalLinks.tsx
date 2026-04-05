@@ -4,49 +4,59 @@ import styles from './InternalLinks.module.css'
 type Props = {
   type: 'home' | 'neighborhood' | 'service' | 'article'
   currentSlug?: string
+  lang?: string
 }
 
 const serviceLinks = [
-  { href: '/services/emergency-roof-repair', label: 'Emergency Roof Repair Chicago' },
-  { href: '/services/roof-leak-repair', label: 'Roof Leak Repair Chicago' },
-  { href: '/services/flat-roof-repair', label: 'Flat Roof Repair Chicago' },
-  { href: '/services/roof-repair-after-storm', label: 'Roof Repair After Storm' },
-  { href: '/services/same-day-roof-repair', label: 'Same Day Roof Repair Chicago' },
-  { href: '/services/roof-replacement', label: 'Roof Replacement Chicago' },
-  { href: '/services/roof-inspection', label: 'Roof Inspection Chicago' },
+  { href: '/services/emergency-roof-repair', label: 'Emergency Roof Repair Chicago', labelEs: 'Reparación de Techo de Emergencia Chicago' },
+  { href: '/services/roof-leak-repair', label: 'Roof Leak Repair Chicago', labelEs: 'Reparación de Goteras Chicago' },
+  { href: '/services/flat-roof-repair', label: 'Flat Roof Repair Chicago', labelEs: 'Reparación de Techo Plano Chicago' },
+  { href: '/services/roof-repair-after-storm', label: 'Roof Repair After Storm', labelEs: 'Reparación de Techo Después de Tormenta' },
+  { href: '/services/same-day-roof-repair', label: 'Same Day Roof Repair Chicago', labelEs: 'Reparación de Techo el Mismo Día Chicago' },
+  { href: '/services/roof-replacement', label: 'Roof Replacement Chicago', labelEs: 'Reemplazo de Techo Chicago' },
+  { href: '/services/roof-inspection', label: 'Roof Inspection Chicago', labelEs: 'Inspección de Techo Chicago' },
 ]
 
 const neighborhoodLinks = [
-  { href: '/neighborhoods/north-side', label: 'North Side' },
-  { href: '/neighborhoods/south-side', label: 'South Side' },
-  { href: '/neighborhoods/west-side', label: 'West Side' },
-  { href: '/neighborhoods/lincoln-park', label: 'Lincoln Park' },
-  { href: '/neighborhoods/logan-square', label: 'Logan Square' },
-  { href: '/neighborhoods/wicker-park', label: 'Wicker Park' },
-  { href: '/neighborhoods/hyde-park', label: 'Hyde Park' },
-  { href: '/neighborhoods/pilsen', label: 'Pilsen' },
-  { href: '/neighborhoods/bucktown', label: 'Bucktown' },
-  { href: '/neighborhoods/andersonville', label: 'Andersonville' },
+  { href: '/neighborhoods/north-side', label: 'North Side', labelEs: 'North Side' },
+  { href: '/neighborhoods/south-side', label: 'South Side', labelEs: 'South Side' },
+  { href: '/neighborhoods/west-side', label: 'West Side', labelEs: 'West Side' },
+  { href: '/neighborhoods/lincoln-park', label: 'Lincoln Park', labelEs: 'Lincoln Park' },
+  { href: '/neighborhoods/logan-square', label: 'Logan Square', labelEs: 'Logan Square' },
+  { href: '/neighborhoods/wicker-park', label: 'Wicker Park', labelEs: 'Wicker Park' },
+  { href: '/neighborhoods/hyde-park', label: 'Hyde Park', labelEs: 'Hyde Park' },
+  { href: '/neighborhoods/pilsen', label: 'Pilsen', labelEs: 'Pilsen' },
+  { href: '/neighborhoods/bucktown', label: 'Bucktown', labelEs: 'Bucktown' },
+  { href: '/neighborhoods/andersonville', label: 'Andersonville', labelEs: 'Andersonville' },
 ]
 
 const articleLinks = [
-  { href: '/articles/how-to-choose', label: 'How to choose a roof repair company' },
-  { href: '/articles/average-cost', label: 'Average cost of roof repair in Chicago' },
-  { href: '/articles/signs-your-roof', label: 'Signs your roof needs immediate repair' },
-  { href: '/articles/after-storm-damage', label: 'What to do after storm damage' },
-  { href: '/articles/how-we-rank-companies', label: 'How we rank companies' },
+  { href: '/articles/how-to-choose', label: 'How to choose a roof repair company', labelEs: 'Cómo elegir una empresa de reparación de techos' },
+  { href: '/articles/average-cost', label: 'Average cost of roof repair in Chicago', labelEs: 'Costo promedio de reparación de techos en Chicago' },
+  { href: '/articles/signs-your-roof', label: 'Signs your roof needs immediate repair', labelEs: 'Señales de que su techo necesita reparación urgente' },
+  { href: '/articles/after-storm-damage', label: 'What to do after storm damage', labelEs: 'Qué hacer después de daños por tormenta' },
+  { href: '/articles/how-we-rank-companies', label: 'How we rank companies', labelEs: 'Cómo clasificamos las empresas' },
 ]
 
-export default function InternalLinks({ type, currentSlug }: Props) {
+export default function InternalLinks({ type, currentSlug, lang }: Props) {
+  const isEs = lang === 'es'
+  const prefix = isEs ? '/es' : ''
+
+  const serviceGroupTitle = isEs ? 'Servicios' : 'Services'
+  const neighborhoodGroupTitle = isEs ? 'Barrios de Chicago' : 'Chicago Neighborhoods'
+  const articleGroupTitle = isEs ? 'Guías de techado' : 'Roofing guides'
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.inner}>
         {(type === 'home' || type === 'neighborhood' || type === 'article') && (
           <div className={styles.group}>
-            <div className={styles.groupTitle}>Services</div>
+            <div className={styles.groupTitle}>{serviceGroupTitle}</div>
             <div className={styles.links}>
               {serviceLinks.map(l => (
-                <Link key={l.href} href={l.href} className={styles.link}>{l.label}</Link>
+                <Link key={l.href} href={`${prefix}${l.href}`} className={styles.link}>
+                  {isEs ? l.labelEs : l.label}
+                </Link>
               ))}
             </div>
           </div>
@@ -54,10 +64,12 @@ export default function InternalLinks({ type, currentSlug }: Props) {
 
         {(type === 'home' || type === 'service' || type === 'article') && (
           <div className={styles.group}>
-            <div className={styles.groupTitle}>Chicago Neighborhoods</div>
+            <div className={styles.groupTitle}>{neighborhoodGroupTitle}</div>
             <div className={styles.links}>
               {neighborhoodLinks.map(l => (
-                <Link key={l.href} href={l.href} className={styles.link}>{l.label}</Link>
+                <Link key={l.href} href={`${prefix}${l.href}`} className={styles.link}>
+                  {isEs ? l.labelEs : l.label}
+                </Link>
               ))}
             </div>
           </div>
@@ -65,10 +77,12 @@ export default function InternalLinks({ type, currentSlug }: Props) {
 
         {(type === 'home' || type === 'neighborhood' || type === 'service') && (
           <div className={styles.group}>
-            <div className={styles.groupTitle}>Roofing guides</div>
+            <div className={styles.groupTitle}>{articleGroupTitle}</div>
             <div className={styles.links}>
               {articleLinks.map(l => (
-                <Link key={l.href} href={l.href} className={styles.link}>{l.label}</Link>
+                <Link key={l.href} href={`${prefix}${l.href}`} className={styles.link}>
+                  {isEs ? l.labelEs : l.label}
+                </Link>
               ))}
             </div>
           </div>
