@@ -7,7 +7,7 @@ import styles from './page.module.css'
 export const metadata: Metadata = {
   title: 'Best Roofing Contractors in Chicago (2026) | Roof Repair Chicago NOW',
   description: 'Find the best roofing contractors in Chicago — verified licensing, same-day service, free estimates, and warranty on all work. Top 10 ranked by our team.',
-  alternates: { canonical: 'https://roofrepairchicagonow.com' },
+  alternates: { canonical: 'https://www.roofrepairchicagonow.com' },
 }
 
 const faqItems = [
@@ -69,7 +69,7 @@ export default function HomePage() {
       {
         '@type': 'WebPage',
         name: 'Top-Rated Roofing Contractors in Chicago',
-        url: 'https://roofrepairchicagonow.com',
+        url: 'https://www.roofrepairchicagonow.com',
         description: 'Find the best roofing contractors in Chicago — verified licensing, same-day service, free estimates, and warranty on all work.',
       },
       {

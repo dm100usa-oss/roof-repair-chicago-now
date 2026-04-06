@@ -5,7 +5,7 @@ import styles from './roofing-guide.module.css'
 export const metadata: Metadata = {
   title: 'Chicago Roofing Guide: Questions & Answers (2026) — Roof Repair Chicago NOW',
   description: 'Practical answers to the most common roofing questions from Chicago homeowners — repair vs. replacement, costs, ice dams, hail claims, contractor licensing, and warranties.',
-  alternates: { canonical: 'https://roofrepairchicagonow.com/roofing-guide' },
+  alternates: { canonical: 'https://www.roofrepairchicagonow.com/roofing-guide' },
 }
 
 const faqItems = [

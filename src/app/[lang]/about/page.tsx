@@ -4,7 +4,7 @@ import styles from '../static-page.module.css'
 export const metadata: Metadata = {
   title: 'About — Roof Repair Chicago NOW',
   description: 'Learn about Roof Repair Chicago NOW — an independent service that researches and ranks the best roof repair companies in Chicago.',
-  alternates: { canonical: 'https://roofrepairchicagonow.com/about' },
+  alternates: { canonical: 'https://www.roofrepairchicagonow.com/about' },
 }
 
 export default function AboutPage() {

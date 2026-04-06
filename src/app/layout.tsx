@@ -16,14 +16,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Roof Repair Chicago NOW',
     description: 'Top 10 vetted roof repair companies in Chicago. Same-day availability, free estimates, warranty on all work.',
-    url: 'https://roofrepairchicagonow.com',
+    url: 'https://www.roofrepairchicagonow.com',
     siteName: 'Roof Repair Chicago NOW',
     locale: 'en_US',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://roofrepairchicagonow.com',
-    languages: { 'es': 'https://roofrepairchicagonow.com/es' },
+    canonical: 'https://www.roofrepairchicagonow.com',
+    languages: { 'es': 'https://www.roofrepairchicagonow.com/es' },
   },
 }
 
@@ -31,7 +31,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Roof Repair Chicago NOW',
-  url: 'https://roofrepairchicagonow.com',
+  url: 'https://www.roofrepairchicagonow.com',
   email: 'roofrepairchicagonow@gmail.com',
   areaServed: {
     '@type': 'City',

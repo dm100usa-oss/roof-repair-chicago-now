@@ -20,11 +20,11 @@ export function generateMetadata({ params }: Props): Metadata {
     description: t.guideDesc,
     alternates: {
       canonical: isEs
-        ? 'https://roofrepairchicagonow.com/es/roofing-guide'
-        : 'https://roofrepairchicagonow.com/roofing-guide',
+        ? 'https://www.roofrepairchicagonow.com/es/roofing-guide'
+        : 'https://www.roofrepairchicagonow.com/roofing-guide',
       languages: {
-        en: 'https://roofrepairchicagonow.com/roofing-guide',
-        es: 'https://roofrepairchicagonow.com/es/roofing-guide',
+        en: 'https://www.roofrepairchicagonow.com/roofing-guide',
+        es: 'https://www.roofrepairchicagonow.com/es/roofing-guide',
       },
     },
   }

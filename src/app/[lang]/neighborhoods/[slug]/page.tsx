@@ -25,11 +25,11 @@ export function generateMetadata({ params }: Props): Metadata {
     description: n.metaDescription,
     alternates: {
       canonical: isEs
-        ? `https://roofrepairchicagonow.com/es/neighborhoods/${n.slug}`
-        : `https://roofrepairchicagonow.com/neighborhoods/${n.slug}`,
+        ? `https://www.roofrepairchicagonow.com/es/neighborhoods/${n.slug}`
+        : `https://www.roofrepairchicagonow.com/neighborhoods/${n.slug}`,
       languages: {
-        'en': `https://roofrepairchicagonow.com/neighborhoods/${n.slug}`,
-        'es': `https://roofrepairchicagonow.com/es/neighborhoods/${n.slug}`,
+        'en': `https://www.roofrepairchicagonow.com/neighborhoods/${n.slug}`,
+        'es': `https://www.roofrepairchicagonow.com/es/neighborhoods/${n.slug}`,
       },
     },
   }
@@ -51,14 +51,14 @@ export default function LangNeighborhoodPage({ params }: Props) {
       {
         '@type': 'WebPage',
         name: n.title,
-        url: `https://roofrepairchicagonow.com${prefix}/neighborhoods/${n.slug}`,
+        url: `https://www.roofrepairchicagonow.com${prefix}/neighborhoods/${n.slug}`,
         description: n.metaDescription,
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: isEs ? 'Inicio' : 'Home', item: `https://roofrepairchicagonow.com${prefix}` },
-          { '@type': 'ListItem', position: 2, name: n.name, item: `https://roofrepairchicagonow.com${prefix}/neighborhoods/${n.slug}` },
+          { '@type': 'ListItem', position: 1, name: isEs ? 'Inicio' : 'Home', item: `https://www.roofrepairchicagonow.com${prefix}` },
+          { '@type': 'ListItem', position: 2, name: n.name, item: `https://www.roofrepairchicagonow.com${prefix}/neighborhoods/${n.slug}` },
         ],
       },
       {

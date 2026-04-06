@@ -4,7 +4,7 @@ import styles from '../static-page.module.css'
 export const metadata: Metadata = {
   title: 'How It Works — Roof Repair Chicago NOW',
   description: 'See how Roof Repair Chicago NOW connects Chicago homeowners with top-rated local roofers — fast, free, and with no obligation.',
-  alternates: { canonical: 'https://roofrepairchicagonow.com/how-it-works' },
+  alternates: { canonical: 'https://www.roofrepairchicagonow.com/how-it-works' },
 }
 
 export default function HowItWorksPage() {

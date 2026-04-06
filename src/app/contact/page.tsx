@@ -4,7 +4,7 @@ import styles from '../static-page.module.css'
 export const metadata: Metadata = {
   title: 'Contact — Roof Repair Chicago NOW',
   description: 'Contact Roof Repair Chicago NOW with questions, feedback, or partnership inquiries.',
-  alternates: { canonical: 'https://roofrepairchicagonow.com/contact' },
+  alternates: { canonical: 'https://www.roofrepairchicagonow.com/contact' },
 }
 
 export default function ContactPage() {

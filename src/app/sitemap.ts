@@ -3,7 +3,7 @@ import { neighborhoods } from '@/lib/neighborhoods'
 import { services } from '@/lib/services'
 import { articles } from '@/lib/articles'
 
-const BASE = 'https://roofrepairchicagonow.com'
+const BASE = 'https://www.roofrepairchicagonow.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

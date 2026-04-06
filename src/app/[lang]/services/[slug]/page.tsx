@@ -26,11 +26,11 @@ export function generateMetadata({ params }: Props): Metadata {
     description: s.metaDescription,
     alternates: {
       canonical: isEs
-        ? `https://roofrepairchicagonow.com/es/services/${s.slug}`
-        : `https://roofrepairchicagonow.com/services/${s.slug}`,
+        ? `https://www.roofrepairchicagonow.com/es/services/${s.slug}`
+        : `https://www.roofrepairchicagonow.com/services/${s.slug}`,
       languages: {
-        'en': `https://roofrepairchicagonow.com/services/${s.slug}`,
-        'es': `https://roofrepairchicagonow.com/es/services/${s.slug}`,
+        'en': `https://www.roofrepairchicagonow.com/services/${s.slug}`,
+        'es': `https://www.roofrepairchicagonow.com/es/services/${s.slug}`,
       },
     },
   }
@@ -52,14 +52,14 @@ export default function LangServicePage({ params }: Props) {
       {
         '@type': 'WebPage',
         name: s.title,
-        url: `https://roofrepairchicagonow.com${prefix}/services/${s.slug}`,
+        url: `https://www.roofrepairchicagonow.com${prefix}/services/${s.slug}`,
         description: s.metaDescription,
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: isEs ? 'Inicio' : 'Home', item: `https://roofrepairchicagonow.com${prefix}` },
-          { '@type': 'ListItem', position: 2, name: s.name, item: `https://roofrepairchicagonow.com${prefix}/services/${s.slug}` },
+          { '@type': 'ListItem', position: 1, name: isEs ? 'Inicio' : 'Home', item: `https://www.roofrepairchicagonow.com${prefix}` },
+          { '@type': 'ListItem', position: 2, name: s.name, item: `https://www.roofrepairchicagonow.com${prefix}/services/${s.slug}` },
         ],
       },
       {

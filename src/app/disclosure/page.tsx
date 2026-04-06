@@ -4,7 +4,7 @@ import styles from '../static-page.module.css'
 export const metadata: Metadata = {
   title: 'Disclosure — Roof Repair Chicago NOW',
   description: 'Advertising and referral disclosure for Roof Repair Chicago NOW.',
-  alternates: { canonical: 'https://roofrepairchicagonow.com/disclosure' },
+  alternates: { canonical: 'https://www.roofrepairchicagonow.com/disclosure' },
 }
 
 export default function DisclosurePage() {

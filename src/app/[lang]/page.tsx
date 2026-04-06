@@ -26,10 +26,10 @@ export function generateMetadata({ params }: Props): Metadata {
       ? 'Encuentre los mejores contratistas de techos en Chicago — licencias verificadas, servicio el mismo día, presupuestos gratuitos y garantía en todos los trabajos.'
       : 'Find the best roofing contractors in Chicago — verified licensing, same-day service, free estimates, and warranty on all work. Top 10 ranked by our team.',
     alternates: {
-      canonical: isEs ? 'https://roofrepairchicagonow.com/es' : 'https://roofrepairchicagonow.com',
+      canonical: isEs ? 'https://www.roofrepairchicagonow.com/es' : 'https://www.roofrepairchicagonow.com',
       languages: {
-        'en': 'https://roofrepairchicagonow.com',
-        'es': 'https://roofrepairchicagonow.com/es',
+        'en': 'https://www.roofrepairchicagonow.com',
+        'es': 'https://www.roofrepairchicagonow.com/es',
       },
     },
   }

@@ -21,6 +21,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'anthropic-ai', allow: '/' },
       { userAgent: 'cohere-ai', allow: '/' },
     ],
-    sitemap: 'https://roofrepairchicagonow.com/sitemap.xml',
+    sitemap: 'https://www.roofrepairchicagonow.com/sitemap.xml',
   }
 }

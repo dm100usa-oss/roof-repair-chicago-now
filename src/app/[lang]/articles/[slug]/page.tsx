@@ -16,7 +16,7 @@ export function generateMetadata({ params }: Props): Metadata {
   return {
     title: `${a.title} — Roof Repair Chicago NOW`,
     description: a.metaDescription,
-    alternates: { canonical: `https://roofrepairchicagonow.com/articles/${a.slug}` },
+    alternates: { canonical: `https://www.roofrepairchicagonow.com/articles/${a.slug}` },
   }
 }
 
@@ -29,7 +29,7 @@ export default function ArticlePage({ params }: Props) {
     '@type': 'Article',
     headline: a.title,
     description: a.metaDescription,
-    publisher: { '@type': 'Organization', name: 'Roof Repair Chicago NOW', url: 'https://roofrepairchicagonow.com' },
+    publisher: { '@type': 'Organization', name: 'Roof Repair Chicago NOW', url: 'https://www.roofrepairchicagonow.com' },
   }
 
   return (

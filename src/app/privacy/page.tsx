@@ -4,7 +4,7 @@ import styles from '../static-page.module.css'
 export const metadata: Metadata = {
   title: 'Privacy Policy — Roof Repair Chicago NOW',
   description: 'Privacy policy for roofrepairchicagonow.com.',
-  alternates: { canonical: 'https://roofrepairchicagonow.com/privacy' },
+  alternates: { canonical: 'https://www.roofrepairchicagonow.com/privacy' },
 }
 
 export default function PrivacyPage() {
