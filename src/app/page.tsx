@@ -109,7 +109,7 @@ export default function HomePage() {
           <h1>Best Roofing Contractors in Chicago</h1>
           <div className={styles.heroSubBlock}>
             <p className={styles.heroP1}>Browse top-rated roofers below.</p>
-            <p className={styles.heroP2}>If you need help fast, call now and we&apos;ll find the best option for you.</p>
+            <p className={styles.heroP2}>If you need help fast, call now and we&apos;ll connect you with a roofer today.</p>
           </div>
           <div className={styles.factors}>
             <div className={styles.factor}>Same-day availability</div>
