@@ -8,6 +8,8 @@ const BASE = 'https://roofrepairchicagonow.com'
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     { url: BASE, lastModified: new Date(), priority: 1.0 },
+    { url: `${BASE}/roofing-guide`, lastModified: new Date(), priority: 0.9 },
+    { url: `${BASE}/es/roofing-guide`, lastModified: new Date(), priority: 0.9 },
     { url: `${BASE}/about`, lastModified: new Date(), priority: 0.5 },
     { url: `${BASE}/how-it-works`, lastModified: new Date(), priority: 0.5 },
     { url: `${BASE}/how-we-rank`, lastModified: new Date(), priority: 0.6 },

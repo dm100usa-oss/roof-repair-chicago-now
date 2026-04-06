@@ -17,7 +17,7 @@ const faqItems = [
   },
   {
     q: 'How much does roof repair cost in Chicago?',
-    a: 'Minor repairs start around $200–$350. Storm damage or full section replacement typically runs $400–$1,500+. All companies on our list offer free on-site estimates before any work begins.',
+    a: 'Minor repairs start around $200–$350. Storm damage or full section replacement typically runs $400–$1,500+. Prices vary by project scope and materials — all companies on our list offer free on-site estimates before any work begins.',
   },
   {
     q: 'Are these roofing companies licensed and insured in Illinois?',
