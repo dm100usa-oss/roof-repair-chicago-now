@@ -67,7 +67,7 @@ export default function LangHomePage({ params }: Props) {
             {t.callNow} — {MAIN_PHONE_DISPLAY}
           </a>
           <div className={styles.btnCallNote}>
-            {isEs ? 'Sin pago anticipado · Vamos a usted · Sin cargos ocultos' : 'No upfront payment · We come to you · No hidden fees'}
+            {isEs ? 'Conexión rápida · Disponible hoy · Sirviendo Chicago' : 'Fast connection · Available today · Serving Chicago'}
           </div>
         </div>
       </section>
