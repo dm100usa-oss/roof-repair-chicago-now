@@ -50,16 +50,16 @@
 }
 
 .factors {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   gap: .5rem;
+  flex-wrap: nowrap;
+  justify-content: center;
   margin-bottom: .75rem;
 }
 
 .factor {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 4px;
   background: #F0FDF4;
   border: 1px solid #BBF7D0;
@@ -90,16 +90,15 @@
 .btnCall:hover { background: var(--red-dark); transform: translateY(-1px); }
 
 .btnCallNote {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   gap: .5rem;
+  justify-content: center;
   margin-top: .5rem;
 }
 
 .btnCallNoteItem {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 4px;
   background: transparent;
   border: 1px solid transparent;
