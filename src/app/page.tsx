@@ -77,11 +77,11 @@ export default function HomePage() {
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <h1>We researched roof repair companies in Chicago and selected the top 10</h1>
+          <h1>Roof repair companies in Chicago</h1>
           <div className={styles.heroSubBlock}>
-            <p>We selected top-rated roof repair companies in Chicago that are ready to take your job today.</p>
-            <p>We consider licensing, transparent pricing, realistic timelines, warranties, and cleanup after the job is done.</p>
-            <p>Call now — and we'll start solving your problem immediately, with no hassle.</p>
+            <p className={styles.heroP1}>We selected top-rated companies in Chicago that are ready<br />to take your job today.</p>
+            <p className={styles.heroP2}>We consider licensing, transparent pricing, realistic timelines, warranties, and cleanup after the job is done.</p>
+            <p className={styles.heroP3}>Call now, and your problem will be resolved with no hassle.</p>
           </div>
           <div className={styles.factors}>
             <div className={styles.factor}>Same-day availability</div>
