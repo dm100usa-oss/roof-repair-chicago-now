@@ -10,8 +10,9 @@ export const dict = {
     langSwitchHref: '/es',
 
     // Hero
-    heroH1: 'Top-rated roofing contractors in Chicago',
-    heroSub: 'We did the research so you don\'t have to. If it\'s urgent — call now.',
+    heroH1: 'Best Roofing Contractors in Chicago',
+    heroSub: 'Browse top-rated roofers below.',
+    heroP2: 'If you need help fast, call now and we\'ll find the best option for you.',
     factor1: 'Same-day availability',
     factor2: 'Free estimate',
     factor3: 'Warranty on work',
@@ -122,7 +123,8 @@ export const dict = {
     langSwitchHref: '/',
 
     heroH1: 'Los mejores contratistas de techos en Chicago',
-    heroSub: 'Hicimos la investigación por usted. Si es urgente — llame ahora.',
+    heroSub: 'Explore los mejores techeros a continuación.',
+    heroP2: 'Si necesita ayuda rápido, llame ahora y encontraremos la mejor opción para usted.',
     factor1: 'Disponibilidad el mismo día',
     factor2: 'Presupuesto gratuito',
     factor3: 'Garantía en el trabajo',
