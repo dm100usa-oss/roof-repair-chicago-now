@@ -90,7 +90,7 @@
 /* WHY US */
 .whyUs { padding: 1.75rem 1.25rem; background: var(--bg); }
 .whyInner { max-width: var(--max-width); margin: 0 auto; }
-.sectionLabel { font-size: 10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #ccc; margin-bottom: .875rem; }
+.sectionLabel { font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #888; margin-bottom: .875rem; }
 .whyTitle { font-size: 19px; font-weight: 900; color: var(--text); margin-bottom: 1.25rem; letter-spacing: -.01em; }
 .whyGrid { display: flex; flex-direction: column; gap: .75rem; }
 .whyCard { background: var(--white); border-radius: var(--radius); padding: 1rem 1.125rem; box-shadow: var(--shadow); }
@@ -100,7 +100,7 @@
 /* COMPANIES */
 .companies { padding: 0 1.25rem 1.5rem; background: var(--bg); }
 .companiesInner { max-width: var(--max-width); margin: 0 auto; }
-.rankedLabel { font-size: 10px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #ccc; margin-bottom: 1rem; padding-top: 1.5rem; }
+.rankedLabel { font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #888; margin-bottom: 1rem; padding-top: 1.5rem; }
 
 /* URGENCY */
 .urgency { background: #111; padding: 1.75rem 1.25rem; }
