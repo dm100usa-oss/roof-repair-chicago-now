@@ -10,7 +10,7 @@ export const dict = {
     langSwitchHref: '/es',
 
     // Hero
-    heroH1: 'We researched roof repair companies in Chicago and selected the top 10',
+    heroH1: 'Roof repair companies in Chicago',
     heroSub: 'Same-day availability, free estimates, and a warranty on all work. Every company verified by our team.',
     factor1: 'Same-day availability',
     factor2: 'Free estimate',
@@ -82,7 +82,7 @@ export const dict = {
     langSwitch: 'English',
     langSwitchHref: '/',
 
-    heroH1: 'Investigamos empresas de reparación de techos en Chicago y seleccionamos las 10 mejores',
+    heroH1: 'Empresas de reparación de techos en Chicago',
     heroSub: 'Disponibilidad el mismo día, presupuestos gratuitos y garantía en todos los trabajos. Cada empresa verificada por nuestro equipo.',
     factor1: 'Disponibilidad el mismo día',
     factor2: 'Presupuesto gratuito',
