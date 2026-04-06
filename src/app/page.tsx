@@ -78,7 +78,11 @@ export default function HomePage() {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <h1>We researched roof repair companies in Chicago and selected the top 10</h1>
-          <p className={styles.heroSub}>Same-day availability, free estimates, and a warranty on all work. Every company verified by our team.</p>
+          <div className={styles.heroSubBlock}>
+            <p>We selected top-rated roof repair companies in Chicago that are ready to take your job today.</p>
+            <p>We consider licensing, transparent pricing, realistic timelines, warranties, and cleanup after the job is done.</p>
+            <p>Call now — and we'll start solving your problem immediately, with no hassle.</p>
+          </div>
           <div className={styles.factors}>
             <div className={styles.factor}>Same-day availability</div>
             <div className={styles.factor}>Free estimate</div>
