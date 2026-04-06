@@ -50,48 +50,16 @@
 }
 
 .factors {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: .5rem;
-  flex-wrap: nowrap;
-  justify-content: center;
-  margin-bottom: 0;
-}
-
-.factor {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: #F0FDF4;
-  border: 1px solid #BBF7D0;
-  border-radius: 20px;
-  padding: 5px 10px;
-  font-size: 11px;
-  font-weight: 700;
-  color: #15803D;
-  white-space: nowrap;
-}
-.factor::before { content: '✓'; }
-
-.factorsWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
-  width: 100%;
-  margin-bottom: 1.25rem;
-}
-
-.factors {
-  display: flex;
-  gap: .5rem;
-  flex-wrap: nowrap;
-  justify-content: center;
   margin-bottom: .75rem;
 }
 
 .factor {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4px;
   background: #F0FDF4;
   border: 1px solid #BBF7D0;
@@ -103,24 +71,6 @@
   white-space: nowrap;
 }
 .factor::before { content: '✓'; }
-
-.btnCallNote {
-  display: flex;
-  gap: .5rem;
-  justify-content: center;
-  margin-top: .5rem;
-  width: 100%;
-}
-
-.btnCallNoteItem {
-  text-align: center;
-  font-size: 13px;
-  color: var(--text-light);
-  font-weight: 500;
-  white-space: nowrap;
-  flex: 1;
-  max-width: 150px;
-}
 
 .btnCall {
   display: block;
@@ -147,10 +97,17 @@
 }
 
 .btnCallNoteItem {
-  text-align: center;
-  font-size: 13px;
-  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 11px;
   font-weight: 500;
+  color: var(--text-light);
   white-space: nowrap;
 }
 
