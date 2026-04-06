@@ -67,7 +67,9 @@ export default function LangHomePage({ params }: Props) {
             {t.callNow} — {MAIN_PHONE_DISPLAY}
           </a>
           <div className={styles.btnCallNote}>
-            {isEs ? 'Conexión rápida · Disponible hoy · Sirviendo Chicago' : 'Fast connection · Available today · Serving Chicago'}
+            <span className={styles.btnCallNoteItem}>{isEs ? 'Conexión rápida' : 'Fast connection'}</span>
+            <span className={styles.btnCallNoteItem}>{isEs ? 'Disponible hoy' : 'Available today'}</span>
+            <span className={styles.btnCallNoteItem}>{isEs ? 'Sirviendo Chicago' : 'Serving Chicago'}</span>
           </div>
         </div>
       </section>
