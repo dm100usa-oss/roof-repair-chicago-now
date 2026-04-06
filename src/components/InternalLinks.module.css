@@ -12,11 +12,11 @@
 }
 .group {}
 .groupTitle {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: .09em;
   text-transform: uppercase;
-  color: #bbb;
+  color: #888;
   margin-bottom: .625rem;
 }
 .links {
