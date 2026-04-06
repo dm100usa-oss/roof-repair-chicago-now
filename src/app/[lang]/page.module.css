@@ -40,7 +40,7 @@
 }
 
 .heroP2 {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--text-muted);
 }
 
@@ -133,7 +133,7 @@
 .urgency { background: #111; padding: 1.75rem 1.25rem; }
 .urgencyInner { max-width: var(--max-width); margin: 0 auto; text-align: center; }
 .urgencyInner h2 { font-size: 21px; font-weight: 900; color: #fff; margin-bottom: .5rem; letter-spacing: -.01em; }
-.urgencyInner p { font-size: 13px; color: #999; margin-bottom: 1.25rem; line-height: 1.5; }
+.urgencyInner p { font-size: 13px; color: #fff; margin-bottom: 1.25rem; line-height: 1.5; }
 .btnCallUrgency {
   display: block; width: 100%; max-width: 400px; margin: 0 auto;
   background: var(--red); border-radius: 14px; padding: 17px;
@@ -166,7 +166,7 @@ details[open] .faqQ::after { transform: rotate(180deg); }
   .heroInner h1 { font-size: 28px; }
   .heroSub { font-size: 16px; }
   .heroP1 { font-size: 24px; }
-  .heroP2 { font-size: 17px; }
+  .heroP2 { font-size: 18px; }
   .heroP3 { font-size: 17px; }
   .whyGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .trustNum { font-size: 24px; }
@@ -177,7 +177,7 @@ details[open] .faqQ::after { transform: rotate(180deg); }
   .heroInner h1 { font-size: 36px; }
   .hero { padding: 3rem 1.25rem 2.5rem; }
   .heroP1 { font-size: 26px; }
-  .heroP2 { font-size: 18px; }
+  .heroP2 { font-size: 19px; }
   .heroP3 { font-size: 18px; }
   .btnCall { font-size: 19px; padding: 20px; max-width: 600px; margin: 0 auto; display: block; }
   .factors { gap: .75rem; }
