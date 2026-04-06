@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { locales, dict, type Locale } from '@/lib/i18n'
 import { MAIN_PHONE, MAIN_PHONE_DISPLAY } from '@/lib/companies'
-import styles from '../roofing-guide/roofing-guide.module.css'
+import styles from '../../roofing-guide/roofing-guide.module.css'
 
 type Props = { params: { lang: string } }
 
