@@ -167,13 +167,7 @@ export default function LangHomePage({ params }: Props) {
       {/* INTERNAL LINKS */}
       <InternalLinks type="home" lang={lang} />
 
-      <section className={styles.reviews}>
-        <div className={styles.reviewsInner}>
-          <div className={styles.reviewsTitle}>{t.reviewsTitle}</div>
-          <div className={styles.reviewsSub}>{t.reviewsSub}</div>
-          <div className={styles.reviewsPlaceholder}>{t.reviewsPlaceholder}</div>
-        </div>
-      </section>
+
     </>
   )
 }
