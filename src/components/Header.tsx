@@ -13,16 +13,16 @@ export default function Header() {
   const navLinks = isEs
     ? [
         { href: '/es', label: 'Inicio' },
-        { href: '/es/how-it-works', label: 'Cómo funciona' },
         { href: '/es/about', label: 'Acerca de' },
         { href: '/es/how-we-rank', label: 'Cómo clasificamos' },
+        { href: '/es#companies', label: 'Top 10' },
         { href: '/es/contact', label: 'Contacto' },
       ]
     : [
         { href: '/', label: 'Home' },
-        { href: '/how-it-works', label: 'How it works' },
         { href: '/about', label: 'About' },
         { href: '/how-we-rank', label: 'How we rank' },
+        { href: '/#companies', label: 'Top 10' },
         { href: '/contact', label: 'Contact' },
       ]
 
