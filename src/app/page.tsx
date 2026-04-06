@@ -5,7 +5,7 @@ import InternalLinks from '@/components/InternalLinks'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Top-Rated Roofing Contractors in Chicago (2026) | Roof Repair Chicago NOW',
+  title: 'Best Roofing Contractors in Chicago (2026) | Roof Repair Chicago NOW',
   description: 'Find the best roofing contractors in Chicago — verified licensing, same-day service, free estimates, and warranty on all work. Top 10 ranked by our team.',
   alternates: { canonical: 'https://roofrepairchicagonow.com' },
 }
@@ -106,9 +106,10 @@ export default function HomePage() {
       {/* HERO */}
       <section className={styles.hero}>
         <div className={styles.heroInner}>
-          <h1>Top-rated roofing contractors in Chicago</h1>
+          <h1>Best Roofing Contractors in Chicago</h1>
           <div className={styles.heroSubBlock}>
-            <p className={styles.heroP1}>We did the research so you don&apos;t have to. If it&apos;s urgent — call now.</p>
+            <p className={styles.heroP1}>Browse top-rated roofers below.</p>
+            <p className={styles.heroP2}>If you need help fast, call now and we&apos;ll find the best option for you.</p>
           </div>
           <div className={styles.factors}>
             <div className={styles.factor}>Same-day availability</div>
