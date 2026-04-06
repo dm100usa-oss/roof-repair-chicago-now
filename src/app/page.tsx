@@ -215,16 +215,7 @@ export default function HomePage() {
       {/* INTERNAL LINKS */}
       <InternalLinks type="home" />
 
-      {/* REVIEWS PLACEHOLDER */}
-      <section className={styles.reviews}>
-        <div className={styles.reviewsInner}>
-          <div className={styles.reviewsTitle}>What our users say</div>
-          <div className={styles.reviewsSub}>Real reviews from Chicago homeowners who found their roofer here.</div>
-          <div className={styles.reviewsPlaceholder}>
-            Reviews coming soon — this section will be filled with verified user experiences.
-          </div>
-        </div>
-      </section>
+
     </>
   )
 }
