@@ -13,6 +13,7 @@
   line-height: 1.25;
   margin-bottom: .6rem;
   letter-spacing: -.01em;
+  text-align: center;
 }
 
 .heroSub {
@@ -28,10 +29,24 @@
 }
 
 .heroSubBlock p {
-  font-size: 13px;
-  color: var(--text-muted);
   line-height: 1.6;
   margin: 0 0 .5rem;
+}
+
+.heroP1 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.heroP2 {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.heroP3 {
+  font-size: 14px;
+  color: var(--text);
 }
 
 .factors {
@@ -150,6 +165,9 @@ details[open] .faqQ::after { transform: rotate(180deg); }
 @media (min-width: 768px) {
   .heroInner h1 { font-size: 28px; }
   .heroSub { font-size: 16px; }
+  .heroP1 { font-size: 19px; }
+  .heroP2 { font-size: 17px; }
+  .heroP3 { font-size: 17px; }
   .whyGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .trustNum { font-size: 24px; }
 }
@@ -158,6 +176,9 @@ details[open] .faqQ::after { transform: rotate(180deg); }
 @media (min-width: 1024px) {
   .heroInner h1 { font-size: 36px; }
   .hero { padding: 3rem 1.25rem 2.5rem; }
+  .heroP1 { font-size: 20px; }
+  .heroP2 { font-size: 18px; }
+  .heroP3 { font-size: 18px; }
   .btnCall { font-size: 19px; padding: 20px; max-width: 600px; margin: 0 auto; display: block; }
   .factors { gap: .75rem; }
   .factor { font-size: 13px; padding: 6px 14px; }
