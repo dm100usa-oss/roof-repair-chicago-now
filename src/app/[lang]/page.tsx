@@ -20,11 +20,11 @@ export function generateMetadata({ params }: Props): Metadata {
   const isEs = lang === 'es'
   return {
     title: isEs
-      ? 'Reparación de Techos Chicago NOW — Top 10 Empresas'
-      : 'Roof Repair Chicago NOW — Top 10 Vetted Companies',
+      ? 'Los Mejores Contratistas de Techos en Chicago (2026) | Roof Repair Chicago NOW'
+      : 'Top-Rated Roofing Contractors in Chicago (2026) | Roof Repair Chicago NOW',
     description: isEs
-      ? 'Investigamos empresas de reparación de techos en Chicago y seleccionamos las 10 mejores — disponibilidad el mismo día, presupuestos gratuitos y garantía.'
-      : 'We researched roof repair companies in Chicago and selected the top 10 — same-day availability, free estimates, warranty on all work.',
+      ? 'Encuentre los mejores contratistas de techos en Chicago — licencias verificadas, servicio el mismo día, presupuestos gratuitos y garantía en todos los trabajos.'
+      : 'Find the best roofing contractors in Chicago — verified licensing, same-day service, free estimates, and warranty on all work. Top 10 ranked by our team.',
     alternates: {
       canonical: isEs ? 'https://roofrepairchicagonow.com/es' : 'https://roofrepairchicagonow.com',
       languages: {
@@ -55,19 +55,7 @@ export default function LangHomePage({ params }: Props) {
         <div className={styles.heroInner}>
           <h1>{t.heroH1}</h1>
           <div className={styles.heroSubBlock}>
-            {isEs ? (
-              <>
-                <p className={styles.heroP1}>Seleccionamos empresas de reparación de techos en Chicago con altas calificaciones y disponibles para tomar su trabajo hoy.</p>
-                <p className={styles.heroP2}>Consideramos licencias, precios transparentes, plazos realistas, garantías y limpieza después del trabajo.</p>
-                <p className={styles.heroP3}>Llame ahora, y su problema será resuelto sin complicaciones.</p>
-              </>
-            ) : (
-              <>
-                <p className={styles.heroP1}>We selected top-rated companies in Chicago that are ready<br />to take your job today.</p>
-                <p className={styles.heroP2}>We consider licensing, transparent pricing, realistic timelines, warranties, and cleanup after the job is done.</p>
-                <p className={styles.heroP3}>Call now, and your problem will be resolved with no hassle.</p>
-              </>
-            )}
+            <p className={styles.heroP1}>{t.heroSub}</p>
           </div>
           <div className={styles.factors}>
             <div className={styles.factor}>{t.factor1}</div>
@@ -124,7 +112,7 @@ export default function LangHomePage({ params }: Props) {
         </div>
       </section>
 
-      <section className={styles.companies}>
+      <section id="companies" className={styles.companies}>
         <div className={styles.companiesInner}>
           <div className={styles.rankedLabel}>{t.companiesLabel}</div>
           {companies.map((company, i) => (
@@ -151,6 +139,26 @@ export default function LangHomePage({ params }: Props) {
               <summary className={styles.faqQ}>{item.q}</summary>
               <div className={styles.faqA}>{item.a}</div>
             </details>
+          ))}
+          <div className={styles.faqTitle} style={{marginTop: '1.75rem'}}>{t.guideTitle}</div>
+          {[
+            { label: isEs ? 'Diagnóstico' : 'Diagnosis', items: [{ q: t.gfaq1q, a: t.gfaq1a }, { q: t.gfaq2q, a: t.gfaq2a }] },
+            { label: isEs ? 'Costo' : 'Cost', items: [{ q: t.gfaq3q, a: t.gfaq3a }, { q: t.gfaq4q, a: t.gfaq4a }] },
+            { label: isEs ? 'Materiales' : 'Materials', items: [{ q: t.gfaq5q, a: t.gfaq5a }] },
+            { label: isEs ? 'Invierno y diques de hielo' : 'Winter & ice dams', items: [{ q: t.gfaq6q, a: t.gfaq6a }] },
+            { label: isEs ? 'Seguro y granizo' : 'Insurance & hail', items: [{ q: t.gfaq7q, a: t.gfaq7a }] },
+            { label: isEs ? 'Licencias y permisos' : 'Licensing & permits', items: [{ q: t.gfaq8q, a: t.gfaq8a }, { q: t.gfaq9q, a: t.gfaq9a }] },
+            { label: isEs ? 'Garantías y financiamiento' : 'Warranties & financing', items: [{ q: t.gfaq10q, a: t.gfaq10a }, { q: t.gfaq11q, a: t.gfaq11a }] },
+          ].map((section) => (
+            <div key={section.label}>
+              <div style={{fontSize:'11px',fontWeight:700,textTransform:'uppercase',letterSpacing:'0.07em',color:'var(--text-light)',margin:'1.25rem 0 0.5rem',paddingLeft:'2px'}}>{section.label}</div>
+              {section.items.map((item) => (
+                <details key={item.q} className={styles.faqItem}>
+                  <summary className={styles.faqQ}>{item.q}</summary>
+                  <div className={styles.faqA}>{item.a}</div>
+                </details>
+              ))}
+            </div>
           ))}
         </div>
       </section>
