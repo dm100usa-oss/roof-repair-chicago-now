@@ -21,7 +21,7 @@ export function generateMetadata({ params }: Props): Metadata {
   return {
     title: isEs
       ? 'Los Mejores Contratistas de Techos en Chicago (2026) | Roof Repair Chicago NOW'
-      : 'Top-Rated Roofing Contractors in Chicago (2026) | Roof Repair Chicago NOW',
+      : 'Best Roofing Contractors in Chicago (2026) | Roof Repair Chicago NOW',
     description: isEs
       ? 'Encuentre los mejores contratistas de techos en Chicago — licencias verificadas, servicio el mismo día, presupuestos gratuitos y garantía en todos los trabajos.'
       : 'Find the best roofing contractors in Chicago — verified licensing, same-day service, free estimates, and warranty on all work. Top 10 ranked by our team.',
@@ -56,6 +56,7 @@ export default function LangHomePage({ params }: Props) {
           <h1>{t.heroH1}</h1>
           <div className={styles.heroSubBlock}>
             <p className={styles.heroP1}>{t.heroSub}</p>
+            <p className={styles.heroP2}>{t.heroP2}</p>
           </div>
           <div className={styles.factors}>
             <div className={styles.factor}>{t.factor1}</div>
