@@ -119,7 +119,7 @@ export default function HomePage() {
           <a href={`tel:${MAIN_PHONE}`} className={styles.btnCall}>
             CALL NOW — {MAIN_PHONE_DISPLAY}
           </a>
-          <div className={styles.btnCallNote}>No upfront payment · We come to you · No hidden fees</div>
+          <div className={styles.btnCallNote}>Fast connection · Available today · Serving Chicago</div>
         </div>
       </section>
 
