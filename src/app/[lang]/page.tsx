@@ -54,7 +54,21 @@ export default function LangHomePage({ params }: Props) {
       <section className={styles.hero}>
         <div className={styles.heroInner}>
           <h1>{t.heroH1}</h1>
-          <p className={styles.heroSub}>{t.heroSub}</p>
+          <div className={styles.heroSubBlock}>
+            {isEs ? (
+              <>
+                <p>Seleccionamos empresas de reparación de techos en Chicago con altas calificaciones y disponibles para tomar su trabajo hoy.</p>
+                <p>Consideramos licencias, precios transparentes, plazos realistas, garantías y limpieza después del trabajo.</p>
+                <p>Llame ahora — y empezaremos a resolver su problema de inmediato, sin complicaciones.</p>
+              </>
+            ) : (
+              <>
+                <p>We selected top-rated roof repair companies in Chicago that are ready to take your job today.</p>
+                <p>We consider licensing, transparent pricing, realistic timelines, warranties, and cleanup after the job is done.</p>
+                <p>Call now — and we'll start solving your problem immediately, with no hassle.</p>
+              </>
+            )}
+          </div>
           <div className={styles.factors}>
             <div className={styles.factor}>{t.factor1}</div>
             <div className={styles.factor}>{t.factor2}</div>
