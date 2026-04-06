@@ -12,18 +12,21 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Roof Repair Chicago NOW — Top 10 Vetted Companies',
   description: 'We researched roof repair companies in Chicago and selected the top 10 — with same-day availability, free estimates, and a warranty on all work.',
-  icons: { icon: '/favicon.ico' },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   openGraph: {
     title: 'Roof Repair Chicago NOW',
     description: 'Top 10 vetted roof repair companies in Chicago. Same-day availability, free estimates, warranty on all work.',
-    url: 'https://www.roofrepairchicagonow.com',
+    url: 'https://roofrepairchicagonow.com',
     siteName: 'Roof Repair Chicago NOW',
     locale: 'en_US',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.roofrepairchicagonow.com',
-    languages: { 'es': 'https://www.roofrepairchicagonow.com/es' },
+    canonical: 'https://roofrepairchicagonow.com',
+    languages: { 'es': 'https://roofrepairchicagonow.com/es' },
   },
 }
 
@@ -31,7 +34,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Roof Repair Chicago NOW',
-  url: 'https://www.roofrepairchicagonow.com',
+  url: 'https://roofrepairchicagonow.com',
   email: 'roofrepairchicagonow@gmail.com',
   areaServed: {
     '@type': 'City',
