@@ -18,17 +18,26 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'Roof Repair Chicago NOW',
+    title: 'Roof Repair Chicago NOW — Top 10 Vetted Companies',
     description: 'Top 10 vetted roof repair companies in Chicago. Same-day availability, free estimates, warranty on all work.',
     url: 'https://www.roofrepairchicagonow.com',
     siteName: 'Roof Repair Chicago NOW',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.roofrepairchicagonow.com/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'Roof Repair Chicago NOW — Top 10 Vetted Companies',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Roof Repair Chicago NOW — Top 10 Vetted Companies',
     description: 'Top 10 vetted roof repair companies in Chicago. Same-day availability, free estimates, warranty on all work.',
+    images: ['https://www.roofrepairchicagonow.com/opengraph-image'],
   },
   alternates: {
     canonical: 'https://www.roofrepairchicagonow.com',
@@ -51,7 +60,6 @@ const organizationSchema = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // Read lang from middleware header — allows correct <html lang> for /es/* pages
   const headersList = headers()
   const lang = headersList.get('x-lang') ?? 'en'
 
