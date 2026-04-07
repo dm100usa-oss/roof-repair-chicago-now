@@ -85,6 +85,7 @@ export default function LangNeighborhoodPage({ params }: Props) {
           </div>
           <h1>{isEs ? `Reparación de Techos en ${n.name} Chicago` : n.title}</h1>
           <p>{isEs ? n.introEs : n.intro}</p>
+          <p className={styles.heroUrgency}>If you need help fast, call now and we&apos;ll connect you with a roofer in {n.name} right away.</p>
           <a href={`tel:${MAIN_PHONE}`} className={styles.btnCall}>
             {isEs ? 'LLAMAR AHORA' : 'CALL NOW'} — {MAIN_PHONE_DISPLAY}
           </a>

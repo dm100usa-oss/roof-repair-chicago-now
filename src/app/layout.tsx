@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { headers } from 'next/headers'
 import '@/styles/globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -18,30 +17,16 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   openGraph: {
-    title: 'Roof Repair Chicago NOW — Top 10 Vetted Companies',
+    title: 'Roof Repair Chicago NOW',
     description: 'Top 10 vetted roof repair companies in Chicago. Same-day availability, free estimates, warranty on all work.',
-    url: 'https://www.roofrepairchicagonow.com',
+    url: 'https://roofrepairchicagonow.com',
     siteName: 'Roof Repair Chicago NOW',
     locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: 'https://www.roofrepairchicagonow.com/opengraph-image',
-        width: 1200,
-        height: 630,
-        alt: 'Roof Repair Chicago NOW — Top 10 Vetted Companies',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Roof Repair Chicago NOW — Top 10 Vetted Companies',
-    description: 'Top 10 vetted roof repair companies in Chicago. Same-day availability, free estimates, warranty on all work.',
-    images: ['https://www.roofrepairchicagonow.com/opengraph-image'],
   },
   alternates: {
-    canonical: 'https://www.roofrepairchicagonow.com',
-    languages: { 'es': 'https://www.roofrepairchicagonow.com/es' },
+    canonical: 'https://roofrepairchicagonow.com',
+    languages: { 'es': 'https://roofrepairchicagonow.com/es' },
   },
 }
 
@@ -49,7 +34,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Roof Repair Chicago NOW',
-  url: 'https://www.roofrepairchicagonow.com',
+  url: 'https://roofrepairchicagonow.com',
   email: 'roofrepairchicagonow@gmail.com',
   areaServed: {
     '@type': 'City',
@@ -60,11 +45,8 @@ const organizationSchema = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const headersList = headers()
-  const lang = headersList.get('x-lang') ?? 'en'
-
   return (
-    <html lang={lang}>
+    <html lang="en">
       <body>
         <script
           type="application/ld+json"

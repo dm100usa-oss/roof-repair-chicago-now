@@ -33,6 +33,13 @@
   margin-bottom: 1.25rem;
 }
 
+.heroUrgency {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
 .btnCall {
   display: block;
   width: 100%;

@@ -28,6 +28,12 @@ const neighborhoodLinks = [
   { href: '/neighborhoods/pilsen', label: 'Pilsen', labelEs: 'Pilsen' },
   { href: '/neighborhoods/bucktown', label: 'Bucktown', labelEs: 'Bucktown' },
   { href: '/neighborhoods/andersonville', label: 'Andersonville', labelEs: 'Andersonville' },
+  { href: '/neighborhoods/lakeview', label: 'Lakeview', labelEs: 'Lakeview' },
+  { href: '/neighborhoods/river-north', label: 'River North', labelEs: 'River North' },
+  { href: '/neighborhoods/gold-coast', label: 'Gold Coast', labelEs: 'Gold Coast' },
+  { href: '/neighborhoods/old-town', label: 'Old Town', labelEs: 'Old Town' },
+  { href: '/neighborhoods/streeterville', label: 'Streeterville', labelEs: 'Streeterville' },
+  { href: '/neighborhoods/roscoe-village', label: 'Roscoe Village', labelEs: 'Roscoe Village' },
 ]
 
 const articleLinks = [
@@ -43,7 +49,7 @@ export default function InternalLinks({ type, currentSlug, lang }: Props) {
   const prefix = isEs ? '/es' : ''
 
   const serviceGroupTitle = isEs ? 'Servicios' : 'Services'
-  const neighborhoodGroupTitle = isEs ? 'Barrios de Chicago' : 'Chicago Neighborhoods'
+  const neighborhoodGroupTitle = isEs ? 'Áreas de servicio' : 'Service areas'
   const articleGroupTitle = isEs ? 'Guías de techado' : 'Roofing guides'
 
   return (

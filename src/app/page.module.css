@@ -41,7 +41,7 @@
 
 .heroP2 {
   font-size: 16px;
-  color: var(--text-muted);
+  color: #444;
 }
 
 .heroP3 {
@@ -65,12 +65,12 @@
   border: 1px solid #BBF7D0;
   border-radius: 20px;
   padding: 5px 10px;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   color: #15803D;
   white-space: nowrap;
 }
-.factor::before { content: '✓'; }
+.factor::before { content: ''; }
 
 .btnCall {
   display: block;
@@ -194,7 +194,8 @@ details[open] .faqQ::after { transform: rotate(180deg); }
   .heroP3 { font-size: 18px; }
   .btnCall { font-size: 19px; padding: 20px; max-width: 600px; margin: 0 auto; display: block; }
   .factors { gap: .75rem; }
-  .factor { font-size: 13px; padding: 6px 14px; }
+  .factor { font-size: 14px; padding: 6px 14px; }
+  .btnCallNoteItem { font-size: 14px; }
   .whyCard strong { font-size: 15px; }
   .whyCard p { font-size: 14px; }
   .faqTitle { font-size: 22px; }

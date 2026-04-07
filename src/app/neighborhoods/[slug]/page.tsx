@@ -70,6 +70,7 @@ export default function NeighborhoodPage({ params }: Props) {
           </div>
           <h1>{n.title}</h1>
           <p>{n.intro}</p>
+          <p className={styles.heroUrgency}>If you need help fast, call now and we&apos;ll connect you with a roofer in {n.name} right away.</p>
           <a href={`tel:${MAIN_PHONE}`} className={styles.btnCall}>
             CALL NOW — {MAIN_PHONE_DISPLAY}
           </a>
