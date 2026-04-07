@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { headers } from 'next/headers'
 import '@/styles/globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -19,14 +20,19 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Roof Repair Chicago NOW',
     description: 'Top 10 vetted roof repair companies in Chicago. Same-day availability, free estimates, warranty on all work.',
-    url: 'https://roofrepairchicagonow.com',
+    url: 'https://www.roofrepairchicagonow.com',
     siteName: 'Roof Repair Chicago NOW',
     locale: 'en_US',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Roof Repair Chicago NOW — Top 10 Vetted Companies',
+    description: 'Top 10 vetted roof repair companies in Chicago. Same-day availability, free estimates, warranty on all work.',
+  },
   alternates: {
-    canonical: 'https://roofrepairchicagonow.com',
-    languages: { 'es': 'https://roofrepairchicagonow.com/es' },
+    canonical: 'https://www.roofrepairchicagonow.com',
+    languages: { 'es': 'https://www.roofrepairchicagonow.com/es' },
   },
 }
 
@@ -34,7 +40,7 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Roof Repair Chicago NOW',
-  url: 'https://roofrepairchicagonow.com',
+  url: 'https://www.roofrepairchicagonow.com',
   email: 'roofrepairchicagonow@gmail.com',
   areaServed: {
     '@type': 'City',
@@ -45,8 +51,12 @@ const organizationSchema = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // Read lang from middleware header — allows correct <html lang> for /es/* pages
+  const headersList = headers()
+  const lang = headersList.get('x-lang') ?? 'en'
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body>
         <script
           type="application/ld+json"
