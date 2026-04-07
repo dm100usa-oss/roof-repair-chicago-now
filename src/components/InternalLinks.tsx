@@ -34,6 +34,14 @@ const neighborhoodLinks = [
   { href: '/neighborhoods/old-town', label: 'Old Town', labelEs: 'Old Town' },
   { href: '/neighborhoods/streeterville', label: 'Streeterville', labelEs: 'Streeterville' },
   { href: '/neighborhoods/roscoe-village', label: 'Roscoe Village', labelEs: 'Roscoe Village' },
+  { href: '/neighborhoods/west-loop', label: 'West Loop', labelEs: 'West Loop' },
+  { href: '/neighborhoods/fulton-market', label: 'Fulton Market', labelEs: 'Fulton Market' },
+  { href: '/neighborhoods/south-loop', label: 'South Loop', labelEs: 'South Loop' },
+  { href: '/neighborhoods/ukrainian-village', label: 'Ukrainian Village', labelEs: 'Ukrainian Village' },
+  { href: '/neighborhoods/lincoln-square', label: 'Lincoln Square', labelEs: 'Lincoln Square' },
+  { href: '/neighborhoods/edgewater', label: 'Edgewater', labelEs: 'Edgewater' },
+  { href: '/neighborhoods/beverly', label: 'Beverly', labelEs: 'Beverly' },
+  { href: '/neighborhoods/ravenswood', label: 'Ravenswood', labelEs: 'Ravenswood' },
 ]
 
 const articleLinks = [
