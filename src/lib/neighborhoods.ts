@@ -212,9 +212,6 @@ export const neighborhoods: Neighborhood[] = [
       { q: '¿Puedo obtener servicio el mismo día en Andersonville?', a: 'Sí, aunque los tiempos de respuesta pueden ser ligeramente más largos debido a la distancia de la mayoría de las bases de empresas de techado. Llame temprano para mejor disponibilidad.' },
     ],
   },
-]
-
-// NOTE: The closing ] above ends the array. New neighborhoods were appended below incorrectly.
   {
     slug: 'lakeview',
     name: 'Lakeview',
